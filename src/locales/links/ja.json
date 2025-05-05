@@ -1,0 +1,23 @@
+{
+  "links": {
+    "vite": "Vite",
+    "vue": "Vue 3",
+    "documentation": "公式ドキュメント",
+    "vscode": "VSCode",
+    "vue_official": "Vue - 公式",
+    "vitest": "Vitest",
+    "cypress": "Cypress",
+    "playwright": "Playwright",
+    "readme": "README.md",
+    "pinia": "Pinia",
+    "vue_router": "Vue Router",
+    "vue_test_utils": "Vue Test Utils",
+    "vue_dev_tools": "Vue Dev Tools",
+    "awesome_vue": "Awesome Vue",
+    "vue_land": "Vue Land",
+    "stackoverflow": "StackOverflow",
+    "bluesky": "@vuejs.org",
+    "twitter": "@vuejs",
+    "becoming_sponsor": "スポンサーになる"
+  }
+}
