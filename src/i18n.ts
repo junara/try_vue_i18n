@@ -5,7 +5,7 @@ import en from './locales/en.json'
 import ja from './locales/ja.json'
 
 // Type for messages
-type MessageSchema = typeof en
+export type MessageSchema = typeof en
 
 // Create i18n instance
 export const i18n = createI18n<[MessageSchema], 'en' | 'ja'>({

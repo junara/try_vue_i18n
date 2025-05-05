@@ -6,8 +6,9 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import { useI18n } from 'vue-i18n'
+import type { MessageSchema } from '@/i18n.ts'
 
-const { t } = useI18n()
+const { t } = useI18n<{ message: MessageSchema }>()
 const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 </script>
 

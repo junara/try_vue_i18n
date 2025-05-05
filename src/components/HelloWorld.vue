@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import type { MessageSchema } from '@/i18n.ts'
 
 defineProps<{
   msg: string
 }>()
 
-const { t } = useI18n()
+const { t } = useI18n<{ message: MessageSchema }>()
 </script>
 
 <template>
