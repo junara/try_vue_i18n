@@ -1,0 +1,26 @@
+{
+  "hello": "你成功了！",
+  "welcome": {
+    "success_message": "您已成功使用 {vite} + {vue} 创建项目。",
+    "documentation": {
+      "title": "文档",
+      "description": "Vue 的 {documentation} 为您提供了入门所需的所有信息。"
+    },
+    "tooling": {
+      "description": "此项目由 {vite} 提供并捆绑。推荐的 IDE 配置为 {ide} + {vs}。如果您需要测试组件和网页，请查看 {vitest} 和 {cypress} / {playwright}。",
+      "more_instructions": "更多说明请参阅 {readme}。"
+    },
+    "ecosystem": {
+      "title": "生态系统",
+      "description": "获取项目的官方工具和库：{pinia}、{vue_router}、{vue_test_utils} 和 {vue_dev_tools}。如果您需要更多资源，建议您访问 {awesome_vue}。"
+    },
+    "community": {
+      "title": "社区",
+      "description": "遇到问题？请在 {vue_land}（我们的官方 Discord 服务器）或 {stackoverflow} 上提问。您还可以关注 {bluesky} Bluesky 官方账号或 {twitter} X 账号，了解 Vue 的最新动态。"
+    },
+    "support": {
+      "title": "支持 Vue",
+      "description": "作为一个独立项目，Vue 的可持续发展依赖于社区的支持。您可以通过 {becoming_sponsor} 来帮助我们。"
+    }
+  }
+}

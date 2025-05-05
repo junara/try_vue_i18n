@@ -1,0 +1,23 @@
+{
+  "links": {
+    "vite": "维特",
+    "vue": "视图3",
+    "documentation": "官方文档",
+    "vscode": "VS代码",
+    "vue_official": "Vue - 官方",
+    "vitest": "维泰斯特",
+    "cypress": "柏",
+    "playwright": "剧作家",
+    "readme": "自述文件.md",
+    "pinia": "松属",
+    "vue_router": "Vue路由器",
+    "vue_test_utils": "Vue 测试工具",
+    "vue_dev_tools": "Vue 开发工具",
+    "awesome_vue": "很棒的 Vue",
+    "vue_land": "维尤乐园",
+    "stackoverflow": "堆栈溢出",
+    "bluesky": "@vuejs.org",
+    "twitter": "@vuejs",
+    "becoming_sponsor": "成为赞助商"
+  }
+}

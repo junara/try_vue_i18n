@@ -20,7 +20,9 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     <template #heading>{{ t('welcome.documentation.title') }}</template>
     <i18n-t keypath="welcome.documentation.description" tag="span">
       <template #documentation>
-        <a href="https://vuejs.org/" target="_blank" rel="noopener">{{ t('links.documentation') }}</a>
+        <a href="https://vuejs.org/" target="_blank" rel="noopener">{{
+          t('links.documentation')
+        }}</a>
       </template>
     </i18n-t>
   </WelcomeItem>

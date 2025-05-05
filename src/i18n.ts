@@ -1,18 +1,23 @@
 import { createI18n } from 'vue-i18n'
 
 // Import locale messages
-import { en, ja } from './locales'
+import { en, ja, zh, fr } from './locales'
 
 // Type for messages
-export type MessageSchema = typeof en
+export type MessageSchema = typeof ja
 
 // Create i18n instance
-export const i18n = createI18n<[MessageSchema], 'en' | 'ja'>({
+export const i18n = createI18n({
   legacy: false, // you must set `false`, to use Composition API
   locale: 'en', // set locale
-  fallbackLocale: 'en', // set fallback locale
+  fallbackLocale: {
+    zh: ['ja'],
+    default: ['en', 'ja'], // fallback locale
+  },
   messages: {
     en,
     ja,
+    zh,
+    fr,
   },
 })
