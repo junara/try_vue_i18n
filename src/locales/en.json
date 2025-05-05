@@ -1,0 +1,48 @@
+{
+  "hello": "You did it!",
+  "welcome": {
+    "success_message": "You've successfully created a project with {0} + {1}.",
+    "documentation": {
+      "title": "Documentation",
+      "description": "Vue's {0} provides you with all information you need to get started."
+    },
+    "tooling": {
+      "title": "Tooling",
+      "description": "This project is served and bundled with {0}. The recommended IDE setup is {1} + {2}. If you need to test your components and web pages, check out {3} and {4} / {5}.",
+      "more_instructions": "More instructions are available in {0}."
+    },
+    "ecosystem": {
+      "title": "Ecosystem",
+      "description": "Get official tools and libraries for your project: {0}, {1}, {2}, and {3}. If you need more resources, we suggest paying {4} a visit."
+    },
+    "community": {
+      "title": "Community",
+      "description": "Got stuck? Ask your question on {0} (our official Discord server), or {1}. You should also follow the official {2} Bluesky account or the {3} X account for latest news in the Vue world."
+    },
+    "support": {
+      "title": "Support Vue",
+      "description": "As an independent project, Vue relies on community backing for its sustainability. You can help us by {0}."
+    }
+  },
+  "links": {
+    "vite": "Vite",
+    "vue": "Vue 3",
+    "documentation": "official documentation",
+    "vscode": "VSCode",
+    "vue_official": "Vue - Official",
+    "vitest": "Vitest",
+    "cypress": "Cypress",
+    "playwright": "Playwright",
+    "readme": "README.md",
+    "pinia": "Pinia",
+    "vue_router": "Vue Router",
+    "vue_test_utils": "Vue Test Utils",
+    "vue_dev_tools": "Vue Dev Tools",
+    "awesome_vue": "Awesome Vue",
+    "vue_land": "Vue Land",
+    "stackoverflow": "StackOverflow",
+    "bluesky": "@vuejs.org",
+    "twitter": "@vuejs",
+    "becoming_sponsor": "becoming a sponsor"
+  }
+}
