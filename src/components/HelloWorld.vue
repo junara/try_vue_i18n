@@ -1,16 +1,26 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import type { MessageSchema } from '@/i18n.ts'
+
 defineProps<{
   msg: string
 }>()
+
+const { t } = useI18n<{ message: MessageSchema }>()
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      <i18n-t keypath="welcome.success_message" tag="span">
+        <template #vite>
+          <a href="https://vite.dev/" target="_blank" rel="noopener">{{ t('links.vite') }}</a>
+        </template>
+        <template #vue>
+          <a href="https://vuejs.org/" target="_blank" rel="noopener">{{ t('links.vue') }}</a>
+        </template>
+      </i18n-t>
     </h3>
   </div>
 </template>

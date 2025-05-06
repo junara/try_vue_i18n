@@ -1,0 +1,27 @@
+{
+  "hello": "成功しました！",
+  "welcome": {
+    "success_message": "{vite} + {vue}でプロジェクトを正常に作成しました。",
+    "documentation": {
+      "title": "ドキュメント",
+      "description": "Vueの{documentation}には、始めるために必要なすべての情報が記載されています。"
+    },
+    "tooling": {
+      "title": "ツール",
+      "description": "このプロジェクトは{vite}で提供およびバンドルされています。推奨されるIDE設定は{ide} + {vs}です。コンポーネントとWebページをテストする必要がある場合は、{vitest}と{cypress} / {playwright}をチェックしてください。",
+      "more_instructions": "詳細な手順は{readme}にあります。"
+    },
+    "ecosystem": {
+      "title": "エコシステム",
+      "description": "プロジェクト用の公式ツールとライブラリを入手してください：{pinia}、{vue_router}、{vue_test_utils}、および{vue_dev_tools}。さらにリソースが必要な場合は、{awesome_vue}を訪問することをお勧めします。"
+    },
+    "community": {
+      "title": "コミュニティ",
+      "description": "行き詰まりましたか？{vue_land}（公式Discordサーバー）または{stackoverflow}で質問してください。また、Vue世界の最新ニュースについては、公式{bluesky} Blueskyアカウントまたは{twitter} Xアカウントをフォローしてください。"
+    },
+    "support": {
+      "title": "Vueをサポート",
+      "description": "独立したプロジェクトとして、Vueはその持続可能性のためにコミュニティのバックアップに依存しています。{becoming_sponsor}で私たちを助けることができます。"
+    }
+  }
+}

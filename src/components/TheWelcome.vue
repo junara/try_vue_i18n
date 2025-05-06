@@ -5,7 +5,10 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import { useI18n } from 'vue-i18n'
+import type { MessageSchema } from '@/i18n.ts'
 
+const { t } = useI18n<{ message: MessageSchema }>()
 const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
 </script>
 
@@ -14,82 +17,139 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    <template #heading>{{ t('welcome.documentation.title') }}</template>
+    <i18n-t keypath="welcome.documentation.description" tag="span">
+      <template #documentation>
+        <a href="https://vuejs.org/" target="_blank" rel="noopener">{{
+          t('links.documentation')
+        }}</a>
+      </template>
+    </i18n-t>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vite.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a>
-    +
-    <a href="https://github.com/vuejs/language-tools" target="_blank" rel="noopener"
-      >Vue - Official</a
-    >. If you need to test your components and web pages, check out
-    <a href="https://vitest.dev/" target="_blank" rel="noopener">Vitest</a>
-    and
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a>
-    /
-    <a href="https://playwright.dev/" target="_blank" rel="noopener">Playwright</a>.
+    <template #heading>{{ t('welcome.tooling.title') }}</template>
+    <i18n-t keypath="welcome.tooling.description" tag="span">
+      <template #vite>
+        <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">
+          {{ t('links.vite') }}
+        </a>
+      </template>
+      <template #ide>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+          {{ t('links.vscode') }}
+        </a>
+      </template>
+      <template #vs>
+        <a href="https://github.com/vuejs/language-tools" target="_blank" rel="noopener">
+          {{ t('links.vue_official') }}
+        </a>
+      </template>
+      <template #vitest>
+        <a href="https://vitest.dev/" target="_blank" rel="noopener">
+          {{ t('links.vitest') }}
+        </a>
+      </template>
+      <template #cypress>
+        <a href="https://www.cypress.io/" target="_blank" rel="noopener">
+          {{ t('links.cypress') }}
+        </a>
+      </template>
+      <template #playwright>
+        <a href="https://playwright.dev/" target="_blank" rel="noopener">
+          {{ t('links.playwright') }}
+        </a>
+      </template>
+    </i18n-t>
 
     <br />
 
-    More instructions are available in
-    <a href="javascript:void(0)" @click="openReadmeInEditor"><code>README.md</code></a
-    >.
+    <i18n-t keypath="welcome.tooling.more_instructions" tag="span">
+      <template #readme>
+        <a href="javascript:void(0)" @click="openReadmeInEditor">
+          <code>{{ t('links.readme') }}</code>
+        </a>
+      </template>
+    </i18n-t>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
+    <template #heading>{{ t('welcome.ecosystem.title') }}</template>
+    <i18n-t keypath="welcome.ecosystem.description" tag="span">
+      <template #pinia>
+        <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">
+          {{ t('links.pinia') }}
+        </a>
+      </template>
+      <template #vue_router>
+        <a href="https://router.vuejs.org/" target="_blank" rel="noopener">
+          {{ t('links.vue_router') }}
+        </a>
+      </template>
+      <template #vue_test_utils>
+        <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">
+          {{ t('links.vue_test_utils') }}
+        </a>
+      </template>
+      <template #vue_dev_tools>
+        <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">
+          {{ t('links.vue_dev_tools') }}
+        </a>
+      </template>
+      <template #awesome_vue>
+        <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">
+          {{ t('links.awesome_vue') }}
+        </a>
+      </template>
+    </i18n-t>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>
-    (our official Discord server), or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also follow the official
-    <a href="https://bsky.app/profile/vuejs.org" target="_blank" rel="noopener">@vuejs.org</a>
-    Bluesky account or the
-    <a href="https://x.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    X account for latest news in the Vue world.
+    <template #heading>{{ t('welcome.community.title') }}</template>
+    <i18n-t keypath="welcome.community.description" tag="span">
+      <template #vue_land>
+        <a href="https://chat.vuejs.org" target="_blank" rel="noopener">
+          {{ t('links.vue_land') }}
+        </a>
+      </template>
+      <template #stackoverflow>
+        <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener">
+          {{ t('links.stackoverflow') }}
+        </a>
+      </template>
+      <template #bluesky>
+        <a href="https://bsky.app/profile/vuejs.org" target="_blank" rel="noopener">
+          {{ t('links.bluesky') }}
+        </a>
+      </template>
+      <template #twitter>
+        <a href="https://x.com/vuejs" target="_blank" rel="noopener">
+          {{ t('links.twitter') }}
+        </a>
+      </template>
+    </i18n-t>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    <template #heading>{{ t('welcome.support.title') }}</template>
+    <i18n-t keypath="welcome.support.description" tag="span">
+      <template #becoming_sponsor>
+        <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">
+          {{ t('links.becoming_sponsor') }}
+        </a>
+      </template>
+    </i18n-t>
   </WelcomeItem>
 </template>
